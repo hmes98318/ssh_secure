@@ -15,12 +15,12 @@ Please refer to the following link for guidance: [How to Filter SSH Connections 
 2. Make the script executable: `chmod +x ssh_secure.sh`.
 3. Use root privileges to set up a crontab for automating the script.  
 
-The `ssh_deny.sh` script will collect IP addresses from `/var/log/secure` and add them to the `/etc/hosts.deny` file, effectively blacklisting them.
+Set up the `ssh_deny.sh` script to run every minute. It collects IP addresses from `/var/log/secure` and adds them to the `/etc/hosts.deny` file, effectively blacklisting them.
 ```bash
 * * * * * /root/ssh_secure.sh
 ```
 
-The `firewall_drop.sh` script, when executed every five minutes, will retrieve the blacklisted IP addresses from `/etc/hosts.deny` and add firewall rules to drop incoming traffic from those IPs.
+Set up the `firewall_drop.sh` script to run every five minutes. It retrieves the blacklisted IP addresses from `/etc/hosts.deny` and adds firewall rules to drop incoming traffic from these IPs.
 ```bash
 */5 * * * * /root/firewall_drop.sh
 ```
