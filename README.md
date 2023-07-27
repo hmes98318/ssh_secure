@@ -1,9 +1,11 @@
 # ssh_secure
-**ssh_secure** is a shell script that helps protect your SSH server from brute-force attacks by maintaining a blacklist of IP addresses involved in suspicious activities.
+**ssh_secure** is a shell script that automatically adds suspicious IP addresses to a blacklist to protect your SSH server from brute-force attacks.
 
 ## Compatibility
 
-This script is intended to work on CentOS 7. For Rocky Linux 9, additional steps are required to install `tcp_wrappers`. Please refer to the following link for guidance: [How to Filter SSH Connections with hosts.allow on Rocky Linux 8](https://zedt.eu/tech/linux/how-to-filter-ssh-connections-with-hosts-allow-on-rocky-linux-8/).
+This script is intended to work on CentOS 7.  
+For Rocky Linux 9, additional steps are required to install `tcp_wrappers`.  
+Please refer to the following link for guidance: [How to Filter SSH Connections with hosts.allow on Rocky Linux 8](https://zedt.eu/tech/linux/how-to-filter-ssh-connections-with-hosts-allow-on-rocky-linux-8/).
 
 ## Usage
 
