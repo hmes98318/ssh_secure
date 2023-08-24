@@ -17,7 +17,7 @@ Please refer to the following link for guidance: [How to Filter SSH Connections 
 
 Set up the `ssh_deny.sh` script to run every minute. It collects IP addresses from `/var/log/secure` and adds them to the `/etc/hosts.deny` file, effectively blacklisting them.
 ```bash
-* * * * * /root/ssh_secure.sh
+* * * * * /root/ssh_deny.sh
 ```
 
 Set up the `firewall_drop.sh` script to run every five minutes. It retrieves the blacklisted IP addresses from `/etc/hosts.deny` and adds firewall rules to drop incoming traffic from these IPs.
